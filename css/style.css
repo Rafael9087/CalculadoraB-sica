@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-background: #989898;
+
+    --cor-primaria: #46215a;
+    --cor-secundaria: #2c113d;
+    --cor-terciaria: #1f082e;
+
+    --cor-borda: #ccc;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculadora {
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-background);
+}
+
+.calculadora input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: right;
+    cursor: default;
+    border: 1px solid var(--cor-borda);
+}
+
+.botoes {
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.linha {
+    display: contents;
+}
+
+.numero, .numero-zero, .sinal, .enter {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: var(--cor-primaria);
+}
+
+.numero:hover, .numero-zero:hover, .sinal:hover, .enter:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.enter {
+    grid-row: span 2;
+}
+
+.numero-zero {
+    grid-column: span 2;
+}
